@@ -1,0 +1,50 @@
+# ----------------------------------------------------------------------------- #
+# This is a decompile of the iscript.bin file 'C:\Users\Richard Shen\Desktop\Starcraft\Mods\Modding\IceCC\UED Mod Iscript\iscript.bin'
+# created on: Sun May 07 21:59:15 2017
+# ----------------------------------------------------------------------------- #
+
+# ----------------------------------------------------------------------------- #
+# This header is used by images.dat entries:
+# 251 SiegeTankTankTurret (terran\tankt.grp)
+.headerstart
+IsId           	91
+Type           	13
+Init           	SiegeTank_Tank_TurretInit
+Death          	SiegeTank_Tank_TurretDeath
+GndAttkInit    	SiegeTank_Tank_TurretGndAttkInit
+AirAttkInit    	SiegeTank_Tank_TurretGndAttkInit
+Unused1        	[NONE]
+GndAttkRpt     	SiegeTank_Tank_TurretGndAttkInit
+AirAttkInit    	SiegeTank_Tank_TurretGndAttkInit
+CastSpell      	[NONE]
+GndAttkToIdle  	SiegeTank_Tank_TurretGndAttkToIdle
+GndAttkToIdle  	SiegeTank_Tank_TurretGndAttkToIdle
+Unused2        	[NONE]
+Walking        	SiegeTank_Tank_TurretGndAttkToIdle
+WalkingToIdle  	SiegeTank_Tank_TurretGndAttkToIdle
+SpecialState1  	SiegeTank_Tank_TurretGndAttkToIdle
+.headerend
+# ----------------------------------------------------------------------------- #
+
+SiegeTank_Tank_TurretInit:
+	wait           	1
+	setfldirect    	12
+	goto           	SiegeTank_Tank_TurretGndAttkToIdle
+
+SiegeTank_Tank_TurretGndAttkToIdle:
+	wait           	125
+	goto           	SiegeTank_Tank_TurretGndAttkToIdle
+
+SiegeTank_Tank_TurretDeath:
+	wait           	1
+	end            	
+
+SiegeTank_Tank_TurretGndAttkInit:
+	wait           	1
+	nobrkcodestart
+	wait           	2
+	attack
+	nobrkcodeend   	
+	gotorepeatattk 	
+	goto           	SiegeTank_Tank_TurretGndAttkToIdle
+

@@ -1,0 +1,56 @@
+# ----------------------------------------------------------------------------- #
+# This is a decompile of the iscript.bin file 'data\scripts\iscript.bin'
+# created on: Mon Jul 13 14:18:23 2009
+# ----------------------------------------------------------------------------- #
+
+# ----------------------------------------------------------------------------- #
+# This header is used by images.dat entries:
+# 505 Unknown505 (bullet\PDripHit.grp)
+.headerstart
+IsId           	255
+Type           	2
+Init           	Unknown255Init
+Death          	Unknown255Death
+GndAttkInit    	Unknown255Death
+AirAttkInit    	[NONE]
+.headerend
+# ----------------------------------------------------------------------------- #
+
+Unknown255Init:
+	wait			1
+	sigorder       	1   # Prevents sprite "memory" leak?
+	wait			1
+Unknown255Death:
+	playsnd        	7	# Misc\ExploLrg.wav
+	domissiledmg   	
+	playfram       	0
+	wait           	1
+	playfram       	1
+	wait           	1
+	playfram       	2
+	wait           	1
+	playfram       	3
+	wait           	1
+	playfram       	4
+	wait           	1
+	playfram       	5
+	wait           	1
+	playfram       	6
+	wait           	1
+	playfram       	7
+	wait           	1
+	playfram       	8
+	wait           	1
+	playfram       	9
+	wait           	1
+	playfram       	10
+	wait           	1
+	playfram       	11
+	wait           	1
+	playfram       	12
+	wait           	1
+	playfram       	13
+	wait           	1
+	playfram       	14
+	wait           	1
+	end            	

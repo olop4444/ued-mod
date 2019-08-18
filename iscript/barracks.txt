@@ -1,0 +1,112 @@
+# ----------------------------------------------------------------------------- #
+# This is a decompile of the iscript.bin file 'data\scripts\iscript.bin'
+# created on: Fri Jul 17 09:51:21 2009
+# ----------------------------------------------------------------------------- #
+
+# ----------------------------------------------------------------------------- #
+# This header is used by images.dat entries:
+# 266 Barracks (terran\TBarrack.grp)
+.headerstart
+IsId           	96
+Type           	24
+Init           	BarracksInit
+Death          	BarracksDeath
+GndAttkInit    	[NONE]
+AirAttkInit    	[NONE]
+Unused1        	[NONE]
+GndAttkRpt     	[NONE]
+AirAttkRpt     	[NONE]
+CastSpell      	[NONE]
+GndAttkToIdle  	[NONE]
+AirAttkToIdle  	[NONE]
+Unused2        	[NONE]
+Walking        	BarracksWalking
+WalkingToIdle  	BarracksWalking
+SpecialState1  	BarracksSpecialState1
+SpecialState2  	[NONE]
+AlmostBuilt    	BarracksAlmostBuilt
+Built          	BarracksBuilt
+Landing        	BarracksLanding
+LiftOff        	BarracksLiftOff
+IsWorking      	BarracksIsWorking
+WorkingToIdle  	BarracksBuilt
+WarpIn         	[NONE]
+Unused3        	[NONE]
+StarEditInit   	[NONE]
+Disable        	BarracksDisable
+Burrow         	[NONE]
+.headerend
+# ----------------------------------------------------------------------------- #
+
+BarracksInit:
+	playfram       	0
+	imgul           267 -3 14	# BarracksShad (terran\tbrShad.grp)
+	goto           	BarracksWalking
+
+BarracksWalking:
+	wait           	125
+	goto           	BarracksWalking
+
+BarracksDeath:
+	playsnd        	7	# Misc\ExploLrg.wav
+	imgol          	334 0 0	# TerranBuildingExplosionlarge (thingy\tBangX.grp)
+	wait           	3
+	liftoffcondjmp 	BarracksLocal00
+	lowsprul       	274 0 0	# TerranBuildingRubblelarge (thingy\RubbleL.grp)
+	wait           	1
+	end            	
+
+BarracksLocal00:
+	wait           	1
+	end            	
+
+BarracksSpecialState1:
+	playfram       	4
+	goto           	BarracksWalking
+
+BarracksAlmostBuilt:
+	playfram       	1
+	goto           	BarracksWalking
+
+BarracksBuilt:
+	playfram       	0
+	goto           	BarracksWalking
+
+BarracksLanding:
+	nobrkcodestart 	
+	wait           	15
+	playsnd        	472	# Misc\Land.WAV
+	playfram       	4
+	wait           	8
+	playfram       	3
+	wait           	8
+	playfram       	2
+	wait           	8
+	playfram       	5
+	wait           	8
+	playfram       	0
+	sigorder       	16
+	nobrkcodeend   	
+	goto           	BarracksWalking
+
+BarracksLiftOff:
+	nobrkcodestart 	
+	playsnd        	471	# Misc\LiftOff.WAV
+	playfram       	5
+	wait           	8
+	playfram       	2
+	wait           	8
+	playfram       	3
+	wait           	8
+	playfram       	4
+	sigorder       	16
+	nobrkcodeend   	
+	goto           	BarracksWalking
+
+BarracksIsWorking:
+	imgol          	286 -5 23	# FactoryOverlay (terran\factoryT.grp)
+	goto           	BarracksWalking
+
+BarracksDisable:
+	goto           	BarracksWalking
+

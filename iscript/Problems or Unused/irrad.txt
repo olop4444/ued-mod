@@ -1,0 +1,50 @@
+# ----------------------------------------------------------------------------- #
+# This is a decompile of the iscript.bin file 'data\scripts\iscript.bin'
+# created on: Tue May 23 20:54:18 2017
+# ----------------------------------------------------------------------------- #
+
+# ----------------------------------------------------------------------------- #
+# This header is used by images.dat entries:
+# 382 Irradiatelarge (thingy\eradLrg.grp)
+# 381 Irradiatemedium (thingy\eradLrg.grp)
+# 380 Irradiatesmall (thingy\eradLrg.grp)
+.headerstart
+IsId           	304
+Type           	1
+Init           	IrradiateInit
+Death          	IrradiateDeath
+.headerend
+# ----------------------------------------------------------------------------- #
+
+IrradiateInit:
+	playfram       	0
+	wait           	3
+	playfram       	1
+	wait           	3
+	playfram       	2
+	wait           	3
+	playfram       	3
+	wait           	3
+	playfram       	4
+	wait           	3
+	playfram       	5
+	wait           	3
+	playfram       	0
+	wait           	3
+	playfram       	1
+	wait           	3
+	playfram       	2
+	wait           	3
+	playfram       	3
+	wait           	3
+	playfram       	4
+	wait           	3
+	playfram       	5
+	wait           	3
+	playsnd			18 # Misc\OnFirSml.wav
+	goto           	IrradiateInit
+
+IrradiateDeath:
+	wait           	1
+	end            	
+

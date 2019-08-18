@@ -1,0 +1,79 @@
+# ----------------------------------------------------------------------------- #
+# This is a decompile of the iscript.bin file 'data\scripts\iscript.bin'
+# created on: Sun Nov 16 14:29:29 2008
+# ----------------------------------------------------------------------------- #
+
+# ----------------------------------------------------------------------------- #
+# This header is used by images.dat entries:
+# 523 PhaseDisruptor (bullet\dragbull.grp)
+.headerstart
+IsId           	234
+Type           	2
+Init           	PhaseDisruptorInit
+Death          	PhaseDisruptorDeath
+GndAttkInit    	PhaseDisruptorGndAttkInit
+AirAttkInit    	[NONE]
+.headerend
+# ----------------------------------------------------------------------------- #
+
+PhaseDisruptorInit:
+	playsnd        	99	# Bullet\DragBull.wav
+	wait           	1
+	sigorder       	1
+	wait           	1
+PhaseDisruptorGndAttkInit:
+	playfram       	0
+	wait           	1
+	playfram       	1
+	wait           	1
+	playfram       	2
+	wait           	1
+	playfram       	3
+	wait           	1
+	playfram       	4
+	wait           	1
+	goto           	PhaseDisruptorGndAttkInit
+
+PhaseDisruptorDeath:
+	playsnd        	7	# Misc\ExploLrg.wav
+	imgol          	334 80 80	# TerranBuildingExplosionlarge (thingy\tBangX.grp)
+	domissiledmg
+	waitrand       	8 10
+        playsnd        	7	# Misc\ExploLrg.wav
+	imgol          	215 -40 0	# ProtossBuildingExplosionLarge (thingy\tBangX.grp)
+	domissiledmg
+	waitrand       	8 10
+        playsnd        	7	# Misc\ExploLrg.wav
+	imgol          	215 36 -60	# ProtossBuildingExplosionLarge (thingy\tBangX.grp)
+	domissiledmg
+	waitrand       	8 10
+        playsnd        	7	# Misc\ExploLrg.wav
+	imgol          	334 -88 60	# TerranBuildingExplosionlarge (thingy\tBangX.grp)
+	domissiledmg
+	waitrand       	8 10
+	playsnd        	7	# Misc\ExploLrg.wav
+	imgol          	334 56 8	# TerranBuildingExplosionlarge (thingy\tBangX.grp)
+	domissiledmg
+	waitrand       	8 10
+        playsnd        	7	# Misc\ExploLrg.wav
+	imgol          	334 0 -36	# TerranBuildingExplosionlarge (thingy\tBangX.grp)
+	domissiledmg
+	waitrand       	8 10
+        playsnd        	7	# Misc\ExploLrg.wav
+	imgol          	215 20 64	# ProtossBuildingExplosionLarge (thingy\tBangX.grp)
+	domissiledmg
+	waitrand       	8 10
+	playsnd        	7	# Misc\ExploLrg.wav
+	imgol          	334 4 -4	# TerranBuildingExplosionlarge (thingy\tBangX.grp)
+	domissiledmg
+	waitrand       	8 10
+	playsnd        	7	# Misc\ExploLrg.wav
+	imgol          	215 -28 -48	# ProtossBuildingExplosionLarge (thingy\tBangX.grp)
+	domissiledmg
+	waitrand       	8 10
+	playsnd        	7	# Misc\ExploLrg.wav
+	imgol          	215 0 0	# ProtossBuildingExplosionLarge (thingy\tBangX.grp)
+	domissiledmg
+	wait            1       	
+	end            	
+

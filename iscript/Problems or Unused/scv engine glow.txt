@@ -1,0 +1,47 @@
+# ----------------------------------------------------------------------------- #
+# This is a decompile of the iscript.bin file 'data\scripts\iscript.bin'
+# created on: Tue Feb 10 16:01:25 2009
+# ----------------------------------------------------------------------------- #
+
+# ----------------------------------------------------------------------------- #
+# This header is used by images.dat entries:
+# 943 ValkyrieAfterburners (thingy\tbmAfter.grp)
+# 942 ValkyrieOverlay2 (thingy\tbmGlow.grp)
+# 941 ValkyrieOverlay (thingy\tbmGlow.grp)
+# 249 SCVGlow (thingy\tscGlow.grp)
+# 225 DropshipGlow (thingy\tdrGlow.grp)
+# 220 BattlecruiserGlow (thingy\tbaGlow.grp)
+# 132 ArbiterGlow (thingy\pabGlow.grp)
+.headerstart
+IsId           	291
+Type           	15
+Init           	Engines_GlowHeaderInit
+Death          	Engines_GlowHeaderDeath
+GndAttkInit    	Engines_GlowHeaderDeath
+AirAttkInit    	Engines_GlowHeaderDeath
+Unused1        	[NONE]
+GndAttkRpt     	Engines_GlowHeaderDeath
+AirAttkRpt     	Engines_GlowHeaderDeath
+CastSpell      	Engines_GlowHeaderDeath
+GndAttkToIdle  	Engines_GlowHeaderDeath
+AirAttkToIdle  	Engines_GlowHeaderDeath
+Unused2        	[NONE]
+Walking        	Engines_GlowHeaderInit
+WalkingToIdle  	Engines_GlowHeaderDeath
+SpecialState1  	Engines_GlowHeaderDeath
+SpecialState2  	[NONE]
+AlmostBuilt    	Engines_GlowHeaderDeath
+.headerend
+# ----------------------------------------------------------------------------- #
+
+Engines_GlowHeaderInit:
+	engset         	0
+	wait           	1
+	engset         	1
+	wait           	1
+	goto           	Engines_GlowHeaderInit
+
+Engines_GlowHeaderDeath:
+	wait           	1
+	end            	
+

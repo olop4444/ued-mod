@@ -1,0 +1,125 @@
+# ----------------------------------------------------------------------------- #
+# This is a decompile of the iscript.bin file 'data\scripts\iscript.bin'
+# created on: Fri Oct 31 15:56:03 2008
+# ----------------------------------------------------------------------------- #
+
+# ----------------------------------------------------------------------------- #
+# This header is used by images.dat entries:
+# 218 Battlecruiser (terran\BattleCr.grp)
+.headerstart
+IsId           	66
+Type           	12
+Init           	BattlecruiserInit
+Death          	BattlecruiserDeath
+GndAttkInit    	BattlecruiserGndAttkInit
+AirAttkInit    	BattlecruiserAirAttkInit
+Unused1        	[NONE]
+GndAttkRpt     	BattlecruiserGndAttkInit
+AirAttkRpt     	BattlecruiserAirAttkInit
+CastSpell      	BattlecruiserCastSpell
+GndAttkToIdle  	BattlecruiserGndAttkToIdle
+AirAttkToIdle  	BattlecruiserGndAttkToIdle
+Unused2        	[NONE]
+Walking        	BattlecruiserWalking
+WalkingToIdle  	BattlecruiserWalkingToIdle
+SpecialState1  	[NONE]
+.headerend
+# ----------------------------------------------------------------------------- #
+
+BattlecruiserInit:
+	imgul          	219 0 42	# BattlecruiserShad (terran\BattleCr.grp)
+	playfram       	0x00	# frame set 0
+	goto           	BattlecruiserGndAttkToIdle
+
+BattlecruiserGndAttkToIdle:
+	wait           	125
+	goto           	BattlecruiserGndAttkToIdle
+
+BattlecruiserDeath:
+	playsnd        	177	# Terran\BATTLE\tbaDth00.wav
+	imgol          	333 0 0	# TerranBuildingExplosionmedium (thingy\tBangL.grp)
+	wait           	3
+	end            	
+
+BattlecruiserGndAttkInit:
+	wait           	1
+	attackwith     	1
+	useweapon		34
+	gotorepeatattk 	
+	goto           	BattlecruiserGndAttkToIdle
+
+BattlecruiserAirAttkInit:
+	wait			1
+	nobrkcodestart
+	imgolorig      	543	# Unknown543 (thingy\eycBlast.grp)
+	wait           	36
+	attackwith     	2
+	wait           	2
+	attackwith     	2
+	wait           	2
+	attackwith     	2
+	wait            2
+	attackwith     	2
+	wait            2
+	attackwith     	2
+	wait            2
+	nobrkcodeend
+	gotorepeatattk
+	goto           	BattlecruiserGndAttkToIdle
+
+# 6 seconds from start to finish
+BattlecruiserCastSpell:
+	nobrkcodestart
+	playsnd 		980	# Terran\Duran\TDnPss00 "self destruct"
+	wait			50
+	playsnd        	8	# Misc\ExploMed.wav
+	imgol          	332 27 20	# TerranBuildingExplosionsmall (thingy\tBangS.grp)
+	imgol           364 0 0	# Stasis Hit (thingy\esfHit.grp)
+	wait			20
+	playsnd        	8	# Misc\ExploMed.wav
+	imgol          	332 -20 -14	# TerranBuildingExplosionsmall (thingy\tBangS.grp)
+	imgol           364 0 0	# Stasis Hit (thingy\esfHit.grp)
+	wait			16
+	playsnd        	8	# Misc\ExploMed.wav
+	imgol           332 -6 6	# TerranBuildingExplosionsmall (thingy\tBangS.grp)
+	imgol           364 0 0	# Stasis Hit (thingy\esfHit.grp)
+	wait			12
+	playsnd        	8	# Misc\ExploMed.wav
+	imgol          	332 -20 -14	# TerranBuildingExplosionsmall (thingy\tBangS.grp)
+	wait			10
+	playsnd			7	# Misc\ExploLrg.wav
+	imgol           333 -8 13	# TerranBuildingExplosionmedium (thingy\tBangL.grp)
+	imgol           364 0 0	# Stasis Hit (thingy\esfHit.grp)
+	wait			11
+	playsnd        	8	# Misc\ExploMed.wav
+	imgol          	332 10 -10	# TerranBuildingExplosionsmall (thingy\tBangS.grp)
+	wait			9
+	playsnd			7	# Misc\ExploLrg.wav
+	imgol           333 5 20	# TerranBuildingExplosionmedium (thingy\tBangL.grp)
+	imgol           364 0 0	# Stasis Hit (thingy\esfHit.grp)
+	wait			8
+	playsnd        	8	# Misc\ExploMed.wav
+	imgol          	332 12 15	# TerranBuildingExplosionsmall (thingy\tBangS.grp)
+	wait			8
+	sprol          	267 0 214	# NuclearExplosion (thingy\NukeHit.grp)
+	castspell
+	sigorder		2
+	nobrkcodeend
+	gotorepeatattk
+	goto			BattlecruiserGndAttkToIdle
+
+BattlecruiserWalking:
+	imgol          	220 0 0	# BattlecruiserGlow (thingy\tbaGlow.grp)
+	goto           	BattlecruiserGndAttkToIdle
+
+BattlecruiserWalkingToIdle:
+	setvertpos     	1
+	waitrand       	8 10
+	setvertpos     	2
+	waitrand       	8 10
+	setvertpos     	1
+	waitrand       	8 10
+	setvertpos     	0
+	waitrand       	8 10
+	goto           	BattlecruiserWalkingToIdle
+

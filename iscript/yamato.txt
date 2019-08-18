@@ -1,0 +1,43 @@
+# ----------------------------------------------------------------------------- #
+# This is a decompile of the iscript.bin file 'data\scripts\iscript.bin'
+# created on: Sat Jun 14 20:37:13 2008
+# ----------------------------------------------------------------------------- #
+
+# ----------------------------------------------------------------------------- #
+# This header is used by images.dat entries:
+# 541 Unknown541 (bullet\eycBull.grp)
+.headerstart
+IsId           	247
+Type           	2
+Init           	YamatoGunInit
+Death          	YamatoGunDeath
+GndAttkInit    	YamatoGunGndAttkInit
+AirAttkInit    	[NONE]
+.headerend
+# ----------------------------------------------------------------------------- #
+
+YamatoGunInit:
+	playsnd        	99	# Bullet\DragBull.wav
+	wait           	1
+	sigorder       	1
+	wait           	1
+YamatoGunGndAttkInit:
+	playfram       	0
+	wait           	1
+	playfram       	1
+	wait           	1
+	playfram       	2
+	wait           	1
+	playfram       	3
+	wait           	1
+	playfram       	4
+	wait           	1
+	domissiledmg 
+	goto           	YamatoGunGndAttkInit
+
+YamatoGunDeath:
+	imgol          	427 0 0	# Unknown427 (thingy\HKexplod.grp)
+	domissiledmg
+	wait           	1
+	end            		
+

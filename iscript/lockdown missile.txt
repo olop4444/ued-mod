@@ -1,0 +1,35 @@
+# ----------------------------------------------------------------------------- #
+# This is a decompile of the iscript.bin file 'data\scripts\iscript.bin'
+# created on: Mon Dec 29 10:45:33 2008
+# ----------------------------------------------------------------------------- #
+
+# ----------------------------------------------------------------------------- #
+# This header is used by images.dat entries:
+# 554 Unknown554 (bullet\missile.grp)
+.headerstart
+IsId           	249
+Type           	2
+Init           	LockdownMissileInit
+Death          	LockdownMissileDeath
+GndAttkInit    	LockdownMissileGndAttkInit
+AirAttkInit    	[NONE]
+.headerend
+# ----------------------------------------------------------------------------- #
+
+LockdownMissileInit:
+	playsnd         80
+	playfram       	0x00	# frame set 0
+	wait           	1
+	sigorder       	1
+	wait           	1
+LockdownMissileGndAttkInit:
+	sprol          	309 0 0	# MissleTrail (thingy\smoke.grp)
+	wait           	3
+	goto           	LockdownMissileGndAttkInit
+
+LockdownMissileDeath:
+	imgol          	556 0 0	# Unknown556 (thingy\empl.grp)
+	domissiledmg   	
+	wait           	1
+	end            	
+

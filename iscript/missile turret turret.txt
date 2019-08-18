@@ -1,0 +1,67 @@
+# ----------------------------------------------------------------------------- #
+# This is a decompile of the iscript.bin file 'data\scripts\iscript.bin'
+# created on: Sat May 20 13:52:38 2017
+# ----------------------------------------------------------------------------- #
+
+# ----------------------------------------------------------------------------- #
+# This header is used by images.dat entries:
+# 297 MissleTurretTurret (terran\missileT.grp)
+.headerstart
+IsId           	120
+Type           	24
+Init           	MissileTurret_Turret_Init
+Death          	MissileTurret_Turret_Death
+GndAttkInit    	MissileTurret_Turret_GndAttkInit
+AirAttkInit    	MissileTurret_Turret_GndAttkInit
+Unused1        	[NONE]
+GndAttkRpt     	MissileTurret_Turret_GndAttkInit
+AirAttkRpt     	MissileTurret_Turret_GndAttkInit
+CastSpell      	[NONE]
+GndAttkToIdle  	MissileTurret_Turret_GndAttkToIdle
+AirAttkToIdle  	MissileTurret_Turret_GndAttkToIdle
+Unused2        	[NONE]
+Walking        	[NONE]
+WalkingToIdle  	[NONE]
+SpecialState1  	[NONE]
+SpecialState2  	[NONE]
+AlmostBuilt    	MissileTurret_Turret_AlmostBuilt
+Built          	MissileTurret_Turret_Built
+Landing        	[NONE]
+LiftOff        	[NONE]
+IsWorking      	MissileTurret_Turret_Built
+WorkingToIdle  	MissileTurret_Turret_Built
+WarpIn         	[NONE]
+Unused3        	[NONE]
+StarEditInit   	[NONE]
+Disable        	MissileTurret_Turret_AlmostBuilt
+Burrow         	[NONE]
+.headerend
+# ----------------------------------------------------------------------------- #
+
+MissileTurret_Turret_Init:
+	playfram       	0x00	# frame set 0
+MissileTurret_Turret_Built:
+	wait           	1
+	turn1cwise     	
+	goto           	MissileTurret_Turret_Built
+
+MissileTurret_Turret_Death:
+	wait           	1
+	end            	
+
+MissileTurret_Turret_GndAttkInit:
+	wait           	1
+	attack
+	attack
+	attack
+	gotorepeatattk 	
+	sigorder       	1
+	wait           	13
+	ignorerest     	
+MissileTurret_Turret_GndAttkToIdle:
+	goto           	MissileTurret_Turret_Built
+
+MissileTurret_Turret_AlmostBuilt:
+	wait           	125
+	goto           	MissileTurret_Turret_AlmostBuilt
+

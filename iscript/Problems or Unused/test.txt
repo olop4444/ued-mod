@@ -1,0 +1,142 @@
+# ----------------------------------------------------------------------------- #
+# This is a decompile of the iscript.bin file 'data\scripts\iscript.bin'
+# created on: Fri Jan 16 10:13:47 2009
+# ----------------------------------------------------------------------------- #
+
+# ----------------------------------------------------------------------------- #
+# This header is used by images.dat entries:
+# 237 KerriganGhost (terran\ughost.grp)
+.headerstart
+IsId           	77
+Type           	13
+Init           	SarahKerriganInit
+Death          	SarahKerriganDeath
+GndAttkInit    	SarahKerriganGndAttkInit
+AirAttkInit    	SarahKerriganGndAttkInit
+Unused1        	[NONE]
+GndAttkRpt     	SarahKerriganGndAttkRpt
+AirAttkRpt     	SarahKerriganGndAttkRpt
+CastSpell      	SarahKerriganCastSpell
+GndAttkToIdle  	SarahKerriganLocal00
+AirAttkToIdle  	SarahKerriganLocal00
+Unused2        	[NONE]
+Walking        	SarahKerriganWalking
+WalkingToIdle  	SarahKerriganWalkingToIdle
+SpecialState1  	SarahKerriganSpecialState1
+.headerend
+# ----------------------------------------------------------------------------- #
+
+SarahKerriganInit:
+	imgul          	945 0 30	# MedicShad (terran\tmeShad.grp)
+SarahKerriganLocal01:
+	playfram       	0x00	# frame set 0
+SarahKerriganLocal02:
+	setvertpos     	1
+	waitrand       	8 10
+	setvertpos     	2
+	waitrand       	8 10
+	setvertpos     	1
+	waitrand       	8 10
+	setvertpos     	0
+	waitrand       	8 10
+	setvertpos     	1
+	waitrand       	8 10
+	setvertpos     	2
+	waitrand       	8 10
+	setvertpos     	1
+	waitrand       	8 10
+	setvertpos     	0
+	waitrand       	8 10
+	goto           	SarahKerriganLocal02
+
+SarahKerriganDeath:
+	playsndbtwn    	296 298	# Terran\Firebat\TFBDth00.WAV, Terran\Firebat\TFBDth02.WAV
+	imgol          	332 0 0	# TerranBuildingExplosionsmall (thingy\tBangS.grp)
+	wait           	3
+	end            	
+
+SarahKerriganGndAttkInit:
+	playfram       	0x00	# frame set 0
+	wait           	1
+	playfram       	0x11	# frame set 1
+	wait           	1
+	playfram       	0x22	# frame set 2
+SarahKerriganGndAttkRpt:
+	wait           	1
+	nobrkcodestart 	
+	playfram       	0x44	# frame set 4
+	wait		1
+	attack         	
+	playfram       	0x55	# frame set 5
+	wait		1
+	playfram	0x44	# frame set 1
+	wait		1
+	playfram	0x33	# frame set 3
+	nobrkcodeend   	
+	gotorepeatattk 	
+	ignorerest     	
+SarahKerriganLocal00:
+	wait		1
+SarahKerriganGndAttkToIdle:
+	playfram	0x22	# frame set 2
+	wait		1
+	playfram       	0x11	# frame set 1
+	wait           	1
+	playfram       	0x00	# frame set 0
+	wait           	1
+	goto           	SarahKerriganWalkingToIdle
+
+SarahKerriganCastSpell:
+	orderdone      	1
+	nobrkcodestart 	
+	playfram       	0x11	# frame set 1
+	wait           	3
+	playfram       	0x22	# frame set 2
+	castspell      	
+	sigorder       	2
+	wait           	3
+	playfram       	0x11	# frame set 1
+	wait           	3
+	nobrkcodeend   	
+	gotorepeatattk 	
+	playfram       	0x00	# frame set 0
+	goto           	SarahKerriganLocal03
+
+SarahKerriganLocal03:
+	wait           	125
+	goto           	SarahKerriganLocal03
+
+SarahKerriganWalking:
+	playfram 	0x00 # frame set 0
+	imgol 		249 0 0 # SCVGlow (thingy\tscGlow.grp)
+	setvertpos 	0
+	goto		SarahKerriganLocal03
+
+SarahKerriganWalkingToIdle:
+	wait		125
+	goto           	SarahKerriganLocal01
+
+SarahKerriganSpecialState1:
+	playfram       	0x33	# frame set 3
+	wait           	1
+
+SarahKerriganLocal04:
+	sigorder       	1
+	playfram       	0x44	# frame set 4
+	wait           	1
+	playfram       	0x55	# frame set 5
+	wait           	1
+	playfram       	0x44	# frame set 4
+	wait           	1
+	playfram       	0x55	# frame set 5
+	wait           	1
+	playfram       	0x44	# frame set 4
+	wait           	1
+	playfram       	0x55	# frame set 5
+	wait           	1
+	playfram       	0x44	# frame set 4
+	wait           	1
+	playfram       	0x55	# frame set 5
+	wait           	1
+	playsnd        	1018	# Terran\Medic\TMedHeal.wav
+	goto           	SarahKerriganLocal04

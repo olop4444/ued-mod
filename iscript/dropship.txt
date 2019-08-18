@@ -1,0 +1,79 @@
+# ----------------------------------------------------------------------------- #
+# This is a decompile of the iscript.bin file 'data\scripts\iscript.bin'
+# created on: Mon Jun 16 07:00:09 2008
+# ----------------------------------------------------------------------------- #
+
+# ----------------------------------------------------------------------------- #
+# This header is used by images.dat entries:
+# 223 Dropship (terran\dropship.grp)
+.headerstart
+IsId           	68
+Type           	12
+Init           	DropshipInit
+Death          	DropshipDeath
+GndAttkInit    	DropshipGndAttkInit
+AirAttkInit    	DropshipAirAttkInit
+Unused1        	[NONE]
+GndAttkRpt     	DropshipGndAttkInit
+AirAttkRpt     	DropshipAirAttkInit
+CastSpell      	[NONE]
+GndAttkToIdle  	DropshipGndAttkToIdle
+AirAttkToIdle  	DropshipGndAttkToIdle
+Unused2        	[NONE]
+Walking        	DropshipWalking
+WalkingToIdle  	DropshipWalkingToIdle
+SpecialState1  	[NONE]
+.headerend
+# ----------------------------------------------------------------------------- #
+
+DropshipInit:
+	imgul          	224 0 42	# DropshipShad (terran\dropship.grp)
+	playfram       	0x00		# frame set 0
+	goto           	DropshipWalkingToIdle
+
+DropshipGndAttkToIdle:
+	wait			125
+	goto           	DropshipWalkingToIdle
+
+DropshipWalkingToIdle:
+	setvertpos     	1
+	waitrand       	8 10
+	setvertpos     	2
+	waitrand       	8 10
+	setvertpos     	1
+	waitrand       	8 10
+	setvertpos     	0
+	waitrand       	8 10
+	goto           	DropshipWalkingToIdle
+
+DropshipDeath:
+	playsnd        	210	# Terran\DROPSHIP\TDrDth00.wav
+	imgol          	332 0 0	# TerranBuildingExplosionsmall (thingy\tBangS.grp)
+	wait           	3
+	end            	
+
+DropshipGndAttkInit:
+	wait           	1
+	playsnd        	69	# Bullet\TMaFir00.wav
+	imgol          	536 0 0	# Unknown536 (thingy\ettFlash.grp)
+	attackwith     	1
+	gotorepeatattk 	
+	goto 			DropshipGndAttkToIdle
+
+DropshipAirAttkInit:
+	wait           	1
+	playsnd        	69	# Bullet\TMaFir00.wav
+	imgol          	536 0 0	# Unknown536 (thingy\ettFlash.grp)
+	attackwith     	2
+	gotorepeatattk 	
+	goto 			DropshipGndAttkToIdle
+
+DropshipWalking:
+	imgol          	245 0 0	# WraithGlow (thingy\tphGlow.grp)
+	setvertpos     	0
+	goto           	DropshipLocal00
+
+DropshipLocal00:
+	wait           	125
+	goto           	DropshipLocal00
+

@@ -1,0 +1,82 @@
+# ----------------------------------------------------------------------------- #
+# This is a decompile of the iscript.bin file 'data\scripts\iscript.bin'
+# created on: Tue May 23 22:30:16 2017
+# ----------------------------------------------------------------------------- #
+
+# ----------------------------------------------------------------------------- #
+# This header is used by images.dat entries:
+# 301 PhysicsLab (terran\physics.grp)
+.headerstart
+IsId           	121
+Type           	20
+Init           	PhysicsLabInit
+Death          	PhysicsLabDeath
+GndAttkInit    	[NONE]
+AirAttkInit    	[NONE]
+Unused1        	[NONE]
+GndAttkRpt     	[NONE]
+AirAttkRpt     	[NONE]
+CastSpell      	[NONE]
+GndAttkToIdle  	[NONE]
+AirAttkToIdle  	[NONE]
+Unused2        	[NONE]
+Walking        	[NONE]
+WalkingToIdle  	[NONE]
+SpecialState1  	PhysicsLabSpecialState1
+SpecialState2  	PhysicsLabSpecialState2
+AlmostBuilt    	PhysicsLabAlmostBuilt
+Built          	PhysicsLabBuilt
+Landing        	PhysicsLabLanding
+LiftOff        	PhysicsLabBuilt
+IsWorking      	PhysicsLabIsWorking
+WorkingToIdle  	PhysicsLabBuilt
+WarpIn         	[NONE]
+.headerend
+# ----------------------------------------------------------------------------- #
+
+PhysicsLabInit:
+	imgul          	303 5 18 # PhysicsLabShad (terran\tplShad.grp)
+	playfram		2
+	goto			PhysicsLabLocal00
+
+PhysicsLabBuilt:
+	playfram       	0
+	goto           	PhysicsLabLocal00
+
+PhysicsLabLocal00:
+	wait           	125
+	goto           	PhysicsLabLocal00
+
+PhysicsLabDeath:
+	playsnd        	7	# Misc\ExploLrg.wav
+	imgol          	334 0 0	# TerranBuildingExplosionlarge (thingy\tBangX.grp)
+	wait           	3
+	liftoffcondjmp 	PhysicsLabLocal01
+	lowsprul       	273 0 0	# TerranBuildingRubblesmall (thingy\RubbleS.grp)
+	wait           	1
+	end            	
+
+PhysicsLabLocal01:
+	wait           	1
+	end            	
+
+PhysicsLabSpecialState1:
+	playfram       	2
+	goto           	PhysicsLabLocal00
+
+PhysicsLabSpecialState2:
+	playfram       	3
+	goto           	PhysicsLabLocal00
+
+PhysicsLabAlmostBuilt:
+	playfram       	4
+	goto           	PhysicsLabLocal00
+
+PhysicsLabLanding:
+	imgol          	302 0 0	# PhysicsLabAttachment (terran\physicsC.grp)
+	goto           	PhysicsLabLocal00
+
+PhysicsLabIsWorking:
+	wait			125
+	goto           	PhysicsLabIsWorking 	
+

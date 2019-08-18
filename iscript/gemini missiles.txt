@@ -1,0 +1,36 @@
+# ----------------------------------------------------------------------------- #
+# This is a decompile of the iscript.bin file 'data\scripts\iscript.bin'
+# created on: Thu Sep 25 15:53:41 2008
+# ----------------------------------------------------------------------------- #
+
+# ----------------------------------------------------------------------------- #
+# This header is used by images.dat entries:
+# 528 GeminiMissles (bullet\gemini.grp)
+.headerstart
+IsId           	239
+Type           	2
+Init           	GeminiMissilesInit
+Death          	GeminiMissilesDeath
+GndAttkInit    	GeminiMissilesGndAttkInit
+AirAttkInit    	[NONE]
+.headerend
+# ----------------------------------------------------------------------------- #
+
+GeminiMissilesInit:
+	playfram       	0x00	# frame set 0
+	playsndbtwn    	82 83	# Bullet\TPhFi200.wav, Bullet\TPhFi200.wav
+	wait           	1
+	sigorder       	1
+	wait           	1
+GeminiMissilesGndAttkInit:
+	sprol          	309 0 0	# MissleTrail (thingy\smoke.grp)
+	wait           	2
+	goto           	GeminiMissilesGndAttkInit
+
+GeminiMissilesDeath:
+	playsnd        	9	# Misc\ExploSm.wav
+	imgol          	332 0 0	# TerranBuildingExplosionsmall (thingy\tBangS.grp)
+	domissiledmg   	
+	wait           	1
+	end            	
+

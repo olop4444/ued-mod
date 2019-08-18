@@ -1,0 +1,115 @@
+# ----------------------------------------------------------------------------- #
+# This is a decompile of the iscript.bin file 'data\scripts\iscript.bin'
+# created on: Sat Dec 27 19:58:56 2008
+# ----------------------------------------------------------------------------- #
+
+# ----------------------------------------------------------------------------- #
+# This header is used by images.dat entries:
+# 525 PsiStorm (thingy\psiStorm.grp)
+.headerstart
+IsId           	236
+Type           	14
+Init           	PsionicStormInit
+Death          	PsionicStormDeath
+GndAttkInit    	PsionicStormDeath
+AirAttkInit    	[NONE]
+Unused1        	[NONE]
+GndAttkRpt     	[NONE]
+AirAttkRpt     	[NONE]
+CastSpell      	[NONE]
+GndAttkToIdle  	[NONE]
+AirAttkToIdle  	[NONE]
+Unused2        	[NONE]
+Walking        	[NONE]
+WalkingToIdle  	[NONE]
+SpecialState1  	[NONE]
+SpecialState2  	PsionicStormSpecialState2
+AlmostBuilt    	[NONE]
+.headerend
+# ----------------------------------------------------------------------------- #
+
+PsionicStormInit:
+	playfram       	0
+	playsnd        	620	# Protoss\TEMPLAR\PTeSto00.WAV
+	tmprmgraphicstart	
+	wait           	5
+	sigorder       	1
+PsionicStormDeath:
+	wait           	1
+	end            	
+
+PsionicStormSpecialState2:
+	tmprmgraphicend	
+PsionicStormLocal00:
+	playfram       	0
+	wait           	2
+	playfram       	1
+	sethorpos       5
+	wait           	2
+	setvertpos      10    
+	playfram       	2
+	wait           	2
+	playfram       	3
+	wait           	2
+	playfram       	4
+        sethorpos       -5
+	wait           	2
+	playfram       	5
+	wait           	2
+	playfram       	6
+	setvertpos      6
+	wait           	2
+	sethorpos       2
+	playfram       	7
+	wait           	2
+	playfram       	8
+	wait           	2
+	playfram       	9
+	wait           	2
+	playfram       	10
+	sethorpos       6
+	wait           	2
+	playfram       	11
+	wait           	2
+	playfram       	12
+	wait           	2
+	playfram       	13
+	sethorpos       -1
+	wait           	2
+	setvertpos      9
+        playfram       	13
+        wait           	2
+        playfram       	12
+	wait           	2
+        playfram       	11
+	wait           	2
+        playfram       	10
+	setvertpos      2
+	wait           	2
+	sethorpos       5
+        playfram       	9
+	wait           	2
+        playfram       	8
+	wait           	2
+        playfram       	7
+	wait           	2
+        playfram       	6
+	wait           	2
+        playfram       	5
+	setvertpos      7
+	wait           	2
+        playfram       	4
+	wait           	2
+        playfram       	3
+	sethorpos       -8
+	wait           	2
+        playfram       	2
+	wait           	2
+        playfram       	1
+	wait           	2
+        playfram       	0
+	setvertpos      0
+	sethorpos       0
+	wait           	2
+	goto           	PsionicStormLocal00
+

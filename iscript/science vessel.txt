@@ -1,0 +1,81 @@
+# ----------------------------------------------------------------------------- #
+# This is a decompile of the iscript.bin file 'data\scripts\iscript.bin'
+# created on: Tue Sep 23 20:49:13 2008
+# ----------------------------------------------------------------------------- #
+
+# ----------------------------------------------------------------------------- #
+# This header is used by images.dat entries:
+# 260 ScienceVessel (terran\wessel.grp)
+.headerstart
+IsId           	88
+Type           	12
+Init           	ScienceVessel_Base_Init
+Death          	ScienceVessel_Base_Death
+GndAttkInit    	ScienceVessel_Base_GndAttkInit
+AirAttkInit    	ScienceVessel_Base_AirAttkInit
+Unused1        	[NONE]
+GndAttkRpt     	ScienceVessel_Base_GndAttkInit
+AirAttkRpt     	ScienceVessel_Base_AirAttkInit
+CastSpell      	ScienceVessel_Base_CastSpell
+GndAttkToIdle  	ScienceVessel_Base_GndAttkToIdle
+AirAttkToIdle  	ScienceVessel_Base_GndAttkToIdle
+Unused2        	[NONE]
+Walking        	ScienceVessel_Base_Walking
+WalkingToIdle  	ScienceVessel_Base_GndAttkToIdle
+SpecialState1  	[NONE]
+.headerend
+# ----------------------------------------------------------------------------- #
+
+ScienceVessel_Base_Init:
+	imgul          	224 0 42	# DropshipShad (terran\dropship.grp)
+	playfram       	0x00		# frame set 0
+	goto           	ScienceVessel_Base_GndAttkToIdle
+
+ScienceVessel_Base_Walking:
+	imgol          	225 0 0	# DropshipGlow (thingy\tdrGlow.grp)
+	setvertpos     	0
+	goto           	ScienceVessel_Base_Local00
+
+ScienceVessel_Base_Death:
+	playsnd        	348	# Terran\VESSEL\TVeDth00.WAV
+	imgol          	333 0 0	# TerranBuildingExplosionmedium (thingy\tBangL.grp)
+	wait           	3
+	end            	
+
+ScienceVessel_Base_GndAttkInit:
+	wait           	1 	
+    attackwith     	1
+	gotorepeatattk 	
+	goto            ScienceVessel_Base_Local00
+
+ScienceVessel_Base_AirAttkInit:
+	wait           	1
+	attackwith     	2
+	gotorepeatattk 	
+	goto            ScienceVessel_Base_Local00
+
+ScienceVessel_Base_Local00:
+	wait			125
+	goto			ScienceVessel_Base_GndAttkToIdle
+
+ScienceVessel_Base_GndAttkToIdle:
+	setvertpos     	1
+	waitrand       	8 10
+	setvertpos     	2
+	waitrand       	8 10
+	setvertpos     	1
+	waitrand       	8 10
+	setvertpos     	0
+	waitrand       	8 10
+	goto            ScienceVessel_Base_GndAttkToIdle
+
+ScienceVessel_Base_CastSpell:
+	imgol          	539 0 0	# Unknown539 (thingy\tveGlowO.grp)
+	nobrkcodestart 	
+	wait           	3
+	castspell      	
+	nobrkcodeend   	
+	gotorepeatattk 	
+	sigorder       	2
+	goto           	ScienceVessel_Base_Walking
+

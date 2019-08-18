@@ -1,0 +1,35 @@
+# ----------------------------------------------------------------------------- #
+# This is a decompile of the iscript.bin file 'data\scripts\iscript.bin'
+# created on: Thu Oct 30 15:57:41 2008
+# ----------------------------------------------------------------------------- #
+
+# ----------------------------------------------------------------------------- #
+# This header is used by images.dat entries:
+# 529 Unknown529 (bullet\missile.grp)
+.headerstart
+IsId           	240
+Type           	2
+Init           	LongboltMissileInit
+Death          	LongboltMissileDeath
+GndAttkInit    	LongboltMissileGndAttkInit
+AirAttkInit    	[NONE]
+.headerend
+# ----------------------------------------------------------------------------- #
+
+LongboltMissileInit:
+	playfram       	0x00	# frame set 0
+	playsnd        	80	# Bullet\HKMISSLE.wav
+	wait           	1
+	sigorder       	1
+	wait           	1
+LongboltMissileGndAttkInit:
+	sprol          	309 0 0	# MissleTrail (thingy\smoke.grp)
+	wait           	3
+	goto           	LongboltMissileGndAttkInit
+
+LongboltMissileDeath:
+	playsnd        	9	# Misc\ExploSm.wav
+	imgol          	533 0 0	# ArcliteShockCannonHit (thingy\mushroom.grp)
+	wait           	1
+	end            	
+

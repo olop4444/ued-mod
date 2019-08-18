@@ -1,0 +1,92 @@
+# ----------------------------------------------------------------------------- #
+# This is a decompile of the iscript.bin file 'data\scripts\iscript.bin'
+# created on: Sat Jun 14 20:37:13 2008
+# ----------------------------------------------------------------------------- #
+
+# ----------------------------------------------------------------------------- #
+# This header is used by images.dat entries:
+# 541 Unknown541 (bullet\eycBull.grp)
+.headerstart
+IsId           	247
+Type           	2
+Init           	YamatoGunInit
+Death          	YamatoGunDeath
+GndAttkInit    	YamatoGunGndAttkInit
+AirAttkInit    	[NONE]
+.headerend
+# ----------------------------------------------------------------------------- #
+
+YamatoGunInit:
+	playfram       	0x00	# frame set 0
+	playsnd        	179	# Terran\BATTLE\tBaYam02.wav
+	wait           	1
+	sigorder       	1
+	wait           	1
+
+YamatoGunGndAttkInit:
+	playsnd        	85	# Bullet\TNsHit00.wav
+	playfram       	0
+	wait           	2
+	playfram       	1
+	wait           	2
+	playfram       	2
+	wait           	2
+	playfram       	3
+	wait           	2
+	playsnd        	13	# Misc\Explo4.wav
+	playfram       	4
+	wait           	2
+	playfram       	5
+	wait           	2
+	playfram       	6
+	wait           	2
+	playfram       	7
+	wait           	2
+	playfram       	8
+	wait           	2
+	playsnd        	13	# Misc\Explo4.wav
+	playfram       	9
+	wait           	2
+	playfram       	10
+	wait           	2
+	playfram       	11
+	wait           	2
+	playfram       	12
+	wait           	2
+	playfram       	13
+	wait           	2
+	playsnd        	13	# Misc\Explo4.wav
+	playfram       	14
+	wait           	2
+	playfram       	15
+	wait           	2
+	playfram       	16
+	wait           	2
+	playfram       	17
+	wait           	2
+	playfram       	18
+	wait           	2
+	playsnd        	13	# Misc\Explo4.wav
+	playfram       	19
+	wait           	2
+	playfram       	20
+	wait           	2
+	playfram       	21
+	wait           	2
+	playfram       	22
+	wait           	2
+	playfram       	23
+	wait           	2
+	playfram       	24
+	wait           	2
+	playfram       	25
+	wait           	2
+	end            	
+
+YamatoGunDeath:
+	imgol          	428 0 0	# Smallexplosion (thingy\small.grp)
+	sprol          	267 0 214	# NuclearExplosion (thingy\NukeHit.grp)
+	domissiledmg   	
+	wait           	1
+	end            	
+

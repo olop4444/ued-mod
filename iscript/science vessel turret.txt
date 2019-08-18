@@ -1,0 +1,38 @@
+# ----------------------------------------------------------------------------- #
+# This header is used by images.dat entries:
+# 261 ScienceVesselTurret (terran\wesselt.grp)
+.headerstart
+IsId           	89
+Type           	12
+Init           	ScienceVessel_Turret_Init
+Death          	ScienceVessel_Turret_Death
+GndAttkInit    	ScienceVessel_Turret_GndAttkInit
+AirAttkInit    	ScienceVessel_Turret_GndAttkInit
+Unused1        	[NONE]
+GndAttkRpt     	ScienceVessel_Turret_GndAttkInit
+AirAttkRpt     	ScienceVessel_Turret_GndAttkInit
+CastSpell      	ScienceVessel_Turret_CastSpell
+GndAttkToIdle  	ScienceVessel_Turret_CastSpell
+AirAttkToIdle  	ScienceVessel_Turret_CastSpell
+Unused2        	[NONE]
+Walking        	ScienceVessel_Turret_CastSpell
+WalkingToIdle  	ScienceVessel_Turret_CastSpell
+SpecialState1  	[NONE]
+.headerend
+# ----------------------------------------------------------------------------- #
+
+ScienceVessel_Turret_Init:
+	playfram       	0x00	# frame set 0
+	goto           	ScienceVessel_Turret_CastSpell
+
+ScienceVessel_Turret_GndAttkInit:
+	playfram       	0x00	# frame set 0
+	goto           	ScienceVessel_Turret_CastSpell
+
+ScienceVessel_Turret_CastSpell:
+	wait           	125
+	goto           	ScienceVessel_Turret_CastSpell
+
+ScienceVessel_Turret_Death:
+	wait           	1
+	end            	

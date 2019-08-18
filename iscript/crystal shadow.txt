@@ -1,0 +1,38 @@
+# ----------------------------------------------------------------------------- #
+# This is a decompile of the iscript.bin file 'data\scripts\iscript.bin'
+# created on: Wed Jul 15 14:55:40 2009
+# ----------------------------------------------------------------------------- #
+
+# ----------------------------------------------------------------------------- #
+# This header is used by images.dat entries:
+# 959 KhalisCrystal (neutral\Khalis.grp)
+# 958 UrajCrystal (neutral\Uraj.grp)
+# 396 KhadarinCrystal (neutral\KhChunk.grp)
+.headerstart
+IsId           	219
+Type           	2
+Init           	LockdownMissileInit
+Death          	LockdownMissileDeath
+GndAttkInit    	LockdownMissileGndAttkInit
+AirAttkInit	LockdownMissileGndAttkInit
+.headerend
+# ----------------------------------------------------------------------------- #
+
+LockdownMissileInit:
+	playsnd         80
+	playfram       	0x00	# frame set 0
+	wait           	1
+	sigorder       	1
+	wait           	1
+LockdownMissileGndAttkInit:
+	sprol          	309 0 0	# MissleTrail (thingy\smoke.grp)
+	wait           	3
+	goto           	LockdownMissileGndAttkInit
+
+LockdownMissileDeath:
+	playsnd        	9	# Misc\ExploSm.wav
+	imgol          	332 0 0	# TerranBuildingExplosionsmall (thingy\tBangS.grp)
+	domissiledmg   	
+	wait           	1
+	end            	
+

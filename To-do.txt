@@ -1,0 +1,30 @@
+SHIELD (terran units only):
+no shield generator: 0 shield when built, 0 shield regen
+shield generator: full shields when built, normal shield regen (in aoe? with support towers as "extenders"?)
+shield generator destroyed: shields set to 0 + no shield generator effects
+
+RAVAGER:
+crash/sticky sprites if it dies mid-overload
+
+SUPPORT TOWER:
+DMatrix -> get grounded cast to work (recharge shields? photon cannon? attack angle?)
+faster moving (remove lift off from other buildings?)
+
+HARD:
+titan attack while moving indefinitely
+defensive matrix self cast on BC
+ravager irradiate damage upgrade
+support tower selectable in group
+
+MISC graphics/QOL:
+dropship loading on right click (might be due to weapon)
+height of missile tank turret siege mode
+wireframes for buildings (barracks, academy, phys lab)
+falcon voice lines
+wyvern/falcon/revenant thrusters
+
+BALANCE:
+RPG damage upgrade - 40+10 -> 40+15?
+
+REDO:
+training facility addon height
