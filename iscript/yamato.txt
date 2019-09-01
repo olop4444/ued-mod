@@ -15,6 +15,7 @@ GndAttkInit    	YamatoGunGndAttkInit
 AirAttkInit    	[NONE]
 .headerend
 # ----------------------------------------------------------------------------- #
+# Ravager A2A projectile
 
 YamatoGunInit:
 	playsnd        	99	# Bullet\DragBull.wav
@@ -24,20 +25,16 @@ YamatoGunInit:
 YamatoGunGndAttkInit:
 	playfram       	0
 	wait           	1
+	domissiledmg
 	playfram       	1
 	wait           	1
 	playfram       	2
 	wait           	1
-	playfram       	3
-	wait           	1
-	playfram       	4
-	wait           	1
-	domissiledmg 
 	goto           	YamatoGunGndAttkInit
 
 YamatoGunDeath:
 	imgol          	427 0 0	# Unknown427 (thingy\HKexplod.grp)
-	domissiledmg
 	wait           	1
+	domissiledmg
 	end            		
 

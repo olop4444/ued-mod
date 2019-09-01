@@ -4,13 +4,15 @@ shield generator: full shields when built, normal shield regen (in aoe? with sup
 shield generator destroyed: shields set to 0 + no shield generator effects
 
 RAVAGER:
-crash/sticky sprites if it dies mid-overload
+crash/sticky sprites if it dies mid-overload*
 
 SUPPORT TOWER:
-DMatrix -> get grounded cast to work (recharge shields? photon cannon? attack angle?)
-faster moving (remove lift off from other buildings?)
+DMatrix -> get grounded cast to work (recharge shields? photon cannon? attack angle?)*
 
-HARD:
+not possible:
+infiltrator cloak
+
+HARD/optional:
 titan attack while moving indefinitely
 defensive matrix self cast on BC
 ravager irradiate damage upgrade
@@ -22,9 +24,7 @@ height of missile tank turret siege mode
 wireframes for buildings (barracks, academy, phys lab)
 falcon voice lines
 wyvern/falcon/revenant thrusters
-
-BALANCE:
-RPG damage upgrade - 40+10 -> 40+15?
+faster moving support tower (remove lift off from other buildings?)
 
 REDO:
 training facility addon height
