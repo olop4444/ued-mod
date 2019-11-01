@@ -2,21 +2,28 @@ SHIELD (terran units only):
 no shield generator: 0 shield when built, 0 shield regen
 shield generator: full shields when built, normal shield regen (in aoe? with support towers as "extenders"?)
 shield generator destroyed: shields set to 0 + no shield generator effects
+^^^all possible with triggers
+//////
+ALTERNATIVE
+units start with 0 (or full?) shields, and cannot regen
+shield generator is available and can use recharge shields
 
 RAVAGER:
 crash/sticky sprites if it dies mid-overload*
 
 SUPPORT TOWER:
 DMatrix -> get grounded cast to work (recharge shields? photon cannon? attack angle?)*
+repair stops working after attempt to recharge shields?
 
-not possible:
-infiltrator cloak
+INFILTRATOR
+not possible due to broken exe edit: cloak
 
 HARD/optional:
 titan attack while moving indefinitely
 defensive matrix self cast on BC
 ravager irradiate damage upgrade
 support tower selectable in group
+AI
 
 MISC graphics/QOL:
 dropship loading on right click (might be due to weapon)
