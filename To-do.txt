@@ -6,17 +6,13 @@ shield generator destroyed: shields set to 0 + no shield generator effects
 //////
 ALTERNATIVE
 units start with 0 (or full?) shields, and cannot regen
-shield generator is available and can use recharge shields
+shield generator is available and can use recharge shields <- not possible
 
 RAVAGER:
 crash/sticky sprites if it dies mid-overload*
 
 SUPPORT TOWER:
 DMatrix -> get grounded cast to work (recharge shields? photon cannon? attack angle?)*
-repair stops working after attempt to recharge shields?
-
-INFILTRATOR
-not possible due to broken exe edit: cloak
 
 HARD/optional:
 titan attack while moving indefinitely
@@ -34,4 +30,4 @@ wyvern/falcon/revenant thrusters
 faster moving support tower (remove lift off from other buildings?)
 
 REDO:
-training facility addon height
+training facility addon height (relative to facility)
