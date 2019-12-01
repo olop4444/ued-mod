@@ -33,3 +33,4 @@ wyvern/falcon/revenant thrusters
 REDO:
 training facility addon height (relative to facility)
 infiltrator cloak
+....
