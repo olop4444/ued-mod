@@ -10,9 +10,11 @@ shield generator is available and can use recharge shields <- not possible
 
 RAVAGER:
 crash/sticky sprites if it dies mid-overload*
+sprite max out?
 
 SUPPORT TOWER:
 DMatrix -> get grounded cast to work (recharge shields? photon cannon? attack angle?)*
+change science vessel energy upgrade to support tower?
 
 HARD/optional:
 titan attack while moving indefinitely
@@ -27,7 +29,7 @@ height of missile tank turret siege mode
 wireframes for buildings (barracks, academy, phys lab)
 falcon voice lines
 wyvern/falcon/revenant thrusters
-faster moving support tower (remove lift off from other buildings?)
 
 REDO:
 training facility addon height (relative to facility)
+infiltrator cloak
