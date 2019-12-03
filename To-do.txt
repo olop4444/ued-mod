@@ -29,11 +29,3 @@ height of missile tank turret siege mode
 wireframes for buildings (barracks, academy, phys lab)
 falcon voice lines
 wyvern/falcon/revenant thrusters
-
-REDO:
-training facility addon height (relative to facility)
-
-patch notes:
-reduce rpg launcher to 35 + 15. increase energy cost from 125 to 150.
-reduced aerotrooper weapon from 18 to 16.
-reduce defensive mode armor from 3 to 2
