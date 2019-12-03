@@ -14,13 +14,13 @@ sprite max out?
 
 SUPPORT TOWER:
 DMatrix -> get grounded cast to work (recharge shields? photon cannon? attack angle?)*
-change science vessel energy upgrade to support tower?
 
 HARD/optional:
 titan attack while moving indefinitely
 defensive matrix self cast on BC
 ravager irradiate damage upgrade
 support tower selectable in group
+change science vessel energy upgrade to support tower?
 AI
 
 MISC graphics/QOL:
@@ -32,5 +32,10 @@ wyvern/falcon/revenant thrusters
 
 REDO:
 training facility addon height (relative to facility)
-infiltrator cloak
-....
+
+BALANCE:
+reduce rpg launcher to 35 + 15? increase cost to 150?
+reduce defensive mode armor from 3 to 2
+
+patch notes:
+reduced overdrive cost (20->15), as 20 seemed bugged (wouldn't always drain hp)
