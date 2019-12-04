@@ -1,1 +1,2 @@
 1) Addon position works in multiples of 16. Placement boxes work in multiples of 32 (although multiples of 16 affect addon positioning).
+2) Images need a death iscript if they are sticking around after unit death

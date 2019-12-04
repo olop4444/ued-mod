@@ -1,0 +1,80 @@
+# ----------------------------------------------------------------------------- #
+# This is a decompile of the iscript.bin file 'data\scripts\iscript.bin'
+# created on: Tue Dec 03 21:34:57 2019
+# ----------------------------------------------------------------------------- #
+
+# ----------------------------------------------------------------------------- #
+# This header is used by images.dat entries:
+# 332 TerranBuildingExplosionsmall (thingy\tBangS.grp)
+# 213 ProtossBuildingExplosionSmall (thingy\tBangS.grp)
+.headerstart
+IsId           	142
+Type           	0
+Init           	Explosion_Small_Init
+Death          	Explosion_Small_Death
+.headerend
+# ----------------------------------------------------------------------------- #
+
+Explosion_Small_Init:
+	playfram       	0
+	wait           	2
+	playfram       	1
+	wait           	2
+	playfram       	2
+	wait           	2
+	playfram       	3
+	wait           	2
+	playfram       	4
+	wait           	2
+	playfram       	5
+	wait           	2
+	playfram       	6
+	wait           	2
+	playfram       	7
+	wait           	2
+	playfram       	8
+	wait           	2
+	end
+
+Explosion_Small_Death:
+	wait           	1
+	end
+
+# ----------------------------------------------------------------------------- #
+# This header is used by images.dat entries:
+# 333 TerranBuildingExplosionmedium (thingy\tBangL.grp)
+# 214 ProtossBuildingExplosionMedium (thingy\tBangL.grp)
+.headerstart
+IsId           	143
+Type           	0
+Init           	Explosion_Medium_Init
+Death          	Explosion_Medium_Death
+.headerend
+# ----------------------------------------------------------------------------- #
+
+Explosion_Medium_Init:
+	playfram       	0
+	wait           	2
+	playfram       	1
+	wait           	2
+	playfram       	2
+	wait           	2
+	playfram       	3
+	wait           	2
+	playfram       	4
+	wait           	2
+	playfram       	5
+	wait           	2
+	playfram       	6
+	wait           	2
+	playfram       	7
+	wait           	2
+	playfram       	8
+	wait           	2
+	playfram       	9
+	wait           	2
+	end            	
+
+Explosion_Medium_Death:
+	wait           	1
+	end

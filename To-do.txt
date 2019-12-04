@@ -7,9 +7,11 @@ shield generator destroyed: shields set to 0 + no shield generator effects
 ALTERNATIVE
 units start with 0 (or full?) shields, and cannot regen
 shield generator is available and can use recharge shields <- not possible
+///////
+IDEAL
+units start with 0 shields, only recharge near shield generator or (grounded? flying? either?) support tower
 
 RAVAGER:
-crash/sticky sprites if it dies mid-overload*
 sprite max out?
 
 SUPPORT TOWER:
