@@ -10,6 +10,7 @@ defensive matrix self cast on BC
 ravager irradiate damage upgrade
 support tower selectable in group
 change science vessel energy upgrade to support tower?
+support tower gets activateable ability which drains energy and allows shield recharge (at accelerated rate?)
 AI
 
 MISC graphics/QOL:
