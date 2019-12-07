@@ -44,6 +44,7 @@ GRAPHICS AND SOUNDS etc.
 -Parallax Software for the Core Overload self destruct voice (taken from Descent)
 -??? radar tower/shield generator graphic
 -??? physics lab graphic
+-??? for GPTP creator
 
 -Maplantis, Staredit.net, and Campaign Creations for helping me learn how to mod
 

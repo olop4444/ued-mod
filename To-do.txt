@@ -1,16 +1,3 @@
-SHIELD (terran units only):
-no shield generator: 0 shield when built, 0 shield regen
-shield generator: full shields when built, normal shield regen (in aoe? with support towers as "extenders"?)
-shield generator destroyed: shields set to 0 + no shield generator effects
-^^^all possible with triggers
-//////
-ALTERNATIVE
-units start with 0 (or full?) shields, and cannot regen
-shield generator is available and can use recharge shields <- not possible
-///////
-IDEAL
-units start with 0 shields, only recharge near shield generator or (grounded? flying? either?) support tower
-
 RAVAGER:
 sprite max out?
 
