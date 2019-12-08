@@ -9,7 +9,6 @@ titan attack while moving indefinitely
 defensive matrix self cast on BC
 ravager irradiate damage upgrade
 support tower selectable in group
-change science vessel energy upgrade to support tower?
 support tower gets activateable ability which drains energy and allows shield recharge (at accelerated rate?)
 AI
 
@@ -19,3 +18,8 @@ height of missile tank turret siege mode
 wireframes for buildings (barracks, academy, phys lab)
 falcon voice lines
 wyvern/falcon/revenant thrusters
+
+patch notes:
+added support tower energy upgrade (firegraft exe edit no longer works)
+fixed defense matrix overlay - it now uses overlay flags rather than unit combat size
+core overload energy cost 150->200
