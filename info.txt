@@ -1,2 +1,18 @@
 1) Addon position works in multiples of 16. Placement boxes work in multiples of 32 (although multiples of 16 affect addon positioning).
 2) Images need a death iscript if they are sticking around after unit death
+
+3) how I got defense matrix to be castable without turning on non-lifted off support tower (starbase):
+a) Hijack Irradiate, or some other targeting spell*. 
+a1) Set irradiate to have the same targeting (ground/air/own/nonbuilding)/range/energy cost as dmatrix.
+a2) Have the button for defense matrix's action be irradiate (leave condition as dmatrix). Make sure to also set the use tech dat requirement for irradiate.
+*The GPTP plugin's cast order hook does not trigger for defense matrix, so this is necessary. 
+*Defense matrix is different than similar spells (such as restoration) since it does not have an associated weapon.
+b) Modify the cast order hook
+b1) Check if the caster is starbase and casting irradiate. If so, replace the tech used variable with that of defense matrix.*
+*This isn't strictly necessary, especially if the energy costs are the same since that's the only thing it's used for at time of writing.
+b2) At the very end of the function, after all checks are done, manually "cast" defense matrix.
+That is to say, add the sprites, play the sounds, add the dmatrix variables to the target manually. Don't forget to account for an existing dmatrix.
+Also tell the unit to idle to cancel the irradiate order.*
+*Normally, when you attempt to cast a spell on an out of range unit (and can't reach it), the icon stays "white" (the unit is still trying to perform the order).
+This hack doesn't keep that behavior; the order never turns white.
+!!!!! Note: this effectively overrides the dmatrix exe edits in Firegraft, so keep that in mind.

@@ -1,8 +1,8 @@
+Shield generator:
+fix lag
+
 RAVAGER:
 sprite max out?
-
-SUPPORT TOWER:
-DMatrix -> get grounded cast to work (recharge shields? photon cannon? attack angle?)*
 
 HARD/optional:
 titan attack while moving indefinitely
