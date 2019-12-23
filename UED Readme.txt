@@ -24,7 +24,7 @@ DatEdit, PyMS, LoEdit, and TBLPad)
 
 -Blizzard
 
--People on Warboards.org and staredit.net for helping me out, (TheNomad, raidmax (Polaris), U-238, and others)
+-People on Warboards.org and staredit.net for helping me out, (TheNomad, raidmax (Polaris), U-238, TassadarZeratul, and others)
 
 GRAPHICS AND SOUNDS etc.
 
@@ -40,11 +40,10 @@ GRAPHICS AND SOUNDS etc.
 -Syphon[MM], for the Institute graphic
 -TheHybrid, for the Falcon portrait
 -Excalibur, for the Training Facility graphic
--TassadarZeratul, for the plugin that makes Shield Generators work
 -Parallax Software for the Core Overload self destruct voice (taken from Descent)
 -??? radar tower/shield generator graphic
 -??? physics lab graphic
--??? for GPTP creator
+-A_of_s_t (and many others) for GPTP
 
 -Maplantis, Staredit.net, and Campaign Creations for helping me learn how to mod
 

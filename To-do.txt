@@ -1,5 +1,15 @@
 Shield generator:
 fix lag
+ideas:
+every x frames
+use cloaking field with global/static fields?
+use location and triggers (see api.h)
+last resort:
+no regen or global regen
+
+/////
+support tower spell which temporarily adds shield regen/hp regen/armor aura (1 of the 3)
+researchable?
 
 RAVAGER:
 sprite max out?
