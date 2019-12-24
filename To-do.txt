@@ -1,17 +1,12 @@
 Shield generator:
-fix lag
-ideas:
-every x frames
-use cloaking field with global/static fields?
-use location and triggers (see api.h)
-last resort:
-no regen or global regen
+watch lag?
 
 /////
 support tower spell which temporarily adds shield regen/hp regen/armor aura (1 of the 3)
 researchable?
 
 RAVAGER:
+self dmatrix?
 sprite max out?
 
 HARD/optional:
@@ -28,8 +23,3 @@ height of missile tank turret siege mode
 wireframes for buildings (barracks, academy, phys lab)
 falcon voice lines
 wyvern/falcon/revenant thrusters
-
-patch notes:
-added support tower energy upgrade (firegraft exe edit no longer works)
-fixed defense matrix overlay - it now uses overlay flags rather than unit combat size
-core overload energy cost 150->200
