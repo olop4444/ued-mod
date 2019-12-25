@@ -2,15 +2,12 @@ Shield generator:
 watch lag?
 
 RAVAGER:
-self dmatrix?
 sprite max out?
 
 HARD/optional:
 titan attack while moving indefinitely
-defensive matrix self cast on BC
 ravager irradiate damage upgrade
 support tower selectable in group
-support tower gets activateable ability which drains energy and allows shield recharge (at accelerated rate?)
 AI
 
 MISC graphics/QOL:
@@ -19,6 +16,17 @@ height of missile tank turret siege mode
 wireframes for buildings (barracks, academy, phys lab)
 falcon voice lines
 wyvern/falcon/revenant thrusters
+prevent shield aura from being cast if no shield generator available
+
+uniqueness:
+terran shields block 1 damage instance each? might be too hard to balance
 
 Patch notes:
-Added Shield Aura ability to Support Tower
+- Added Aegis Protection upgrade to Titan - every 10 seconds, if the Titan has not been damaged within 10 seconds, add 1 layer of Force Field, up to 3.
+Force Field overrides this (does not stack).
+- Reduced upgrade cost/time of Ravager's speed movement upgrade from 250->200, 2750->2000, respectively.
+- Force Field (DMatrix) now lasts for exactly 15 attacks instead of 250 damage.
+
+Fixes:
+fixed u8 overflow for support tower shield aura energy drain
+fixed dmatrix not disappearing on subunits
