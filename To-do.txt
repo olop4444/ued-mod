@@ -21,12 +21,9 @@ prevent shield aura from being cast if no shield generator available
 uniqueness:
 terran shields block 1 damage instance each? might be too hard to balance
 
-Patch notes:
-- Added Aegis Protection upgrade to Titan - every 10 seconds, if the Titan has not been damaged within 10 seconds, add 1 layer of Force Field, up to 3.
-Force Field overrides this (does not stack).
-- Reduced upgrade cost/time of Ravager's speed movement upgrade from 250->200, 2750->2000, respectively.
-- Force Field (DMatrix) now lasts for exactly 15 attacks instead of 250 damage.
+bugs:
+rpg targeting wrong
 
 Fixes:
-fixed u8 overflow for support tower shield aura energy drain
-fixed dmatrix not disappearing on subunits
+fixed wrong icon for ravager overload
+fixed centaur wireframe being too big in transport
