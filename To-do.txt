@@ -21,11 +21,8 @@ prevent shield aura from being cast if no shield generator available
 uniqueness:
 terran shields block 1 damage instance each? might be too hard to balance
 
-bugs:
-rpg targeting wrong
-
 Fixes:
-Moved dmatrix code away from cast_order hook to defense_matrix hook. This allows me to avoid using irradiate to trigger the dmatrix code.
+With dmatrix code no longer overlapping with RPGLauncher code on irradiate, fixed RPG Launcher cost/targeting problems.
 
 Patch:
-Shutdown (Lockdown) now also stops psi field generation
+Sniper hp 40->35, shields 0->5
