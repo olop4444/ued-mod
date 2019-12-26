@@ -1,32 +1,31 @@
-||||||||||||||||||||||||||||||||||||||||||||||||| Backstory |||||||||||||||||||||||||||||||||||||||||||||||||
+|||||||||||||||||||||||||||||||||||||||| Backstory |||||||||||||||||||||||||||||||||||||||||||
 
 	After news of the UED Expeditionary Force's defeat reached Earth, military leaders were stunned. They
 had severly underestimated the inhabitants of the Korpulu sector. In response, they sent their most advanced
-fleet to conquer the Zerg, Protoss, and Terrans once and for all.
+fleet, the true might of the UED, to conquer the Zerg, Protoss, and Terrans once and for all.
 	This time, they will take no prisoners. 
 	This time, they will leave no survivors. 
 	This time, there can only be victory. 
+	
+****************************************** About *********************************************
 
+Version 1.0 by ForTheSwarm (2019/12/25)
+Compatible with Starcraft Broodwar 1.16.1. Not compatible with any other version or Remastered.
 
-_______________________________________The Mod Itself_______________________________________
-
-
-Gameplay: UED units are strong, but gas-heavy. 
-Most units come equipped with combat shields. However, a Shield Generator must be built before they will work. 
-If it is destroyed, then the shields are once again disabled.
-
-Crystals (Uraj, Khalis, etc.) will crash the game, due to my cannibalization of their iscript.
-
-::::::::::::::::::::::::::::::::::::::::::::CREDITS::::::::::::::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::: Credits ::::::::::::::::::::::::::::::::::::::::::::
 
 -Creators of all programs used (IceCC, RetroGRP, SFGrpConv, WinMPQ, MPQDraft, MPQCompressor, FireGraft, 
-DatEdit, PyMS, LoEdit, and TBLPad)
+DatEdit, PyMS, LoEdit, GPTP, and TBLPad)
 
 -Blizzard
 
 -People on Warboards.org and staredit.net for helping me out, (TheNomad, raidmax (Polaris), U-238, TassadarZeratul, and others)
 
-GRAPHICS AND SOUNDS etc.
+-Maplantis, Staredit.net, and Campaign Creations for teaching me how to mod
+
+-Myself (ForTheSwarm)!
+
+GRAPHICS, SOUNDS, MISC.
 
 -slient, from Maplantis, for the Wyvern graphic
 -Devourer, from staredit.net, for Munitions Center graphic
@@ -44,8 +43,4 @@ GRAPHICS AND SOUNDS etc.
 -??? radar tower/shield generator graphic
 -??? physics lab graphic
 -A_of_s_t (and many others) for GPTP
-
--Maplantis, Staredit.net, and Campaign Creations for helping me learn how to mod
-
--Myself!
 
