@@ -25,5 +25,7 @@ bugs:
 rpg targeting wrong
 
 Fixes:
-fixed wrong icon for ravager overload
-fixed centaur wireframe being too big in transport
+Moved dmatrix code away from cast_order hook to defense_matrix hook. This allows me to avoid using irradiate to trigger the dmatrix code.
+
+Patch:
+Shutdown (Lockdown) now also stops psi field generation

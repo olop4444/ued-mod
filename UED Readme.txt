@@ -30,7 +30,7 @@ GRAPHICS AND SOUNDS etc.
 
 -slient, from Maplantis, for the Wyvern graphic
 -Devourer, from staredit.net, for Munitions Center graphic
--Voyager7456[MM], from Maplantis, for the Pulse Rifle attack graphic, Institute graphic, Aerotrooper graphic, Falcon graphic
+-Voyager7456[MM], from Maplantis, for the Pulse Rifle attack graphic, Institute graphic, Aerotrooper graphic, Falcon graphic, DMatrix plugin hook
 -Shaggydavid, from Warboards, for modifying the Aerotrooper graphic
 -SubFocus, for the ECV graphic
 -Kookster, for the Stellardrome graphic
